@@ -1,4 +1,10 @@
 # Python to Linux Web App on Azure
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1 (266e96dc-8dd5-4b52-b179-8b58e49bd2d0)'
+    appType: 'webAppLinux'
+    appName: 'yong-flaskpipelines'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build your Python project and deploy it to Azure as a Linux Web App.
 # Change python version to one thats appropriate for your application.
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
